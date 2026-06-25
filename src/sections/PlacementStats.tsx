@@ -1,4 +1,4 @@
-import { motion, useInView, useSpring, useTransform } from 'framer-motion';
+import { motion, useInView} from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 
 function Counter({ from = 0, to, duration = 2, suffix = '' }: { from?: number, to: number, duration?: number, suffix?: string }) {

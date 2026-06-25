@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Plane, Ship, Train } from 'lucide-react';
 
 
@@ -9,17 +9,6 @@ export function Hero() {
   const y = useTransform(scrollY, [0, 1000], [0, 300]);
   const { scrollYProgress } = useScroll();
 
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.3],
-    [1, 0.8]
-  );
-
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, 0.3],
-    [1, 0]
-  );
   return (
 
     <section className="relative min-h-screen flex items-center overflow-hidden bg-primary-navy pt-32">

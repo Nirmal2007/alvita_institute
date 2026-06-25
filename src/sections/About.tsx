@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, Lightbulb, Award, Users } from 'lucide-react';
+import { Target, Lightbulb, Award} from 'lucide-react';
 
 export function About() {
   const container = {
