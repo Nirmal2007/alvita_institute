@@ -7,7 +7,7 @@ export function Hero() {
   const { scrollY } = useScroll();
 
   const y = useTransform(scrollY, [0, 1000], [0, 300]);
-  const { scrollYProgress } = useScroll();
+
 
   return (
 
