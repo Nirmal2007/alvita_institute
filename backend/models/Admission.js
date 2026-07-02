@@ -34,7 +34,11 @@ const admissionSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
-});
+
+}, {
+    collection: "web_form",
+}
+);
 
 module.exports = mongoose.model(
     "Admission",

@@ -33,7 +33,7 @@ export function AdmissionForm() {
     setSubmitStatus('idle');
 
     try {
-      // Mock API Call
+      // API Call
       const response = await fetch(
         "http://localhost:5000/api/admissions",
         {
