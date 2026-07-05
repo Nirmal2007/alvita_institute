@@ -7,14 +7,14 @@ const testimonials = [
     role: 'Cabin Crew',
     company: 'Emirates',
     image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop',
-    review: 'Alvita transformed my dream into reality. The mock interviews and grooming sessions were exactly what I needed to clear the rigorous Emirates selection process.',
+    review: 'Arctic Professionals transformed my dream into reality. The mock interviews and grooming sessions were exactly what I needed to clear the rigorous Emirates selection process.',
   },
   {
     name: 'Rahul Sharma',
     role: 'Ground Operations',
     company: 'IndiGo Airlines',
     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop',
-    review: 'The faculty is exceptionally knowledgeable. They guided me through every step, from technical knowledge to interview skills. Proud to be an Alvita alumnus.',
+    review: 'The faculty is exceptionally knowledgeable. They guided me through every step, from technical knowledge to interview skills. Proud to be an Arctic  alumnus.',
   },
   {
     name: 'Elena Costa',
@@ -57,16 +57,16 @@ export function SuccessStories() {
               className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm relative mt-10"
             >
               <div className="absolute -top-10 left-8">
-                <img 
-                  src={t.image} 
-                  alt={t.name} 
+                <img
+                  src={t.image}
+                  alt={t.name}
                   className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md"
                 />
               </div>
               <div className="absolute top-6 right-8 text-primary-blue/20">
                 <Quote size={40} />
               </div>
-              
+
               <div className="mt-10">
                 <p className="text-gray-600 italic mb-6 leading-relaxed relative z-10">
                   "{t.review}"

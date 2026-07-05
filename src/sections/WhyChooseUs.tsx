@@ -21,7 +21,7 @@ export function WhyChooseUs() {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
-          
+
           <div className="w-full lg:w-1/2">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -29,7 +29,7 @@ export function WhyChooseUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-accent-green font-semibold tracking-wider uppercase text-sm mb-2">Why Choose Alvita</h2>
+              <h2 className="text-accent-green font-semibold tracking-wider uppercase text-sm mb-2">Why Choose Arctic</h2>
               <h3 className="text-4xl md:text-5xl font-heading font-bold mb-6">
                 Your Bridge to a <br />Successful Career
               </h3>
@@ -55,7 +55,7 @@ export function WhyChooseUs() {
             </div>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -63,9 +63,9 @@ export function WhyChooseUs() {
             className="w-full lg:w-1/2"
           >
             <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
-                alt="Professional Training" 
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
+                alt="Professional Training"
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-primary-navy/20 mix-blend-multiply" />

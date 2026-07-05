@@ -8,7 +8,7 @@ const videos = [
   },
   {
     id: 'dQw4w9WgXcQ',
-    title: 'How Alvita helped me secure a Railway Job',
+    title: 'How Arctic Professionals helped me secure a Railway Job',
     thumbnail: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=2084&auto=format&fit=crop',
   },
   {
@@ -34,7 +34,7 @@ export function VideoReviews() {
               Video Reviews
             </h3>
             <p className="text-gray-300 text-lg">
-              Watch our students share their transformational journeys and experiences at Alvita Institute.
+              Watch our students share their transformational journeys and experiences at Arctic Professionals.
             </p>
           </motion.div>
         </div>
@@ -49,13 +49,13 @@ export function VideoReviews() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="group relative rounded-2xl overflow-hidden aspect-video cursor-pointer shadow-xl border border-white/10"
             >
-              <img 
-                src={video.thumbnail} 
-                alt={video.title} 
+              <img
+                src={video.thumbnail}
+                alt={video.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-primary-navy/40 group-hover:bg-primary-navy/20 transition-colors duration-300" />
-              
+
               {/* Play Button */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center shadow-lg shadow-primary-blue/50 transform group-hover:scale-110 transition-transform duration-300">

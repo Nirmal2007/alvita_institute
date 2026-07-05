@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import {
   FaFacebookF,
   FaInstagram,
@@ -14,10 +14,10 @@ export function Footer() {
           {/* About */}
           <div>
             <h3 className="text-2xl font-heading font-bold mb-6">
-              Alvita <span className="text-accent-green">Institute</span>
+              Arctic <span className="text-accent-green">Professionals</span>
             </h3>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading consultancy and training institute specializing in aviation, marine, railway, logistics, and hospitality sectors.
+              Arctic Professionals is a premier consultancy and training institute dedicated to shaping successful careers across the Aviation, Marine, Railway, and Logistics industries.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-blue transition-colors">
@@ -63,30 +63,21 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-heading font-semibold mb-6">Contact Info</h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="text-accent-green shrink-0 mt-1" size={20} />
-                <span className="text-gray-400">8/198 , 2 ND FLOOR ,
-                  VASU ARCADE ,
-                  RAJA ANNAMALAI ROAD
-                  SAI BABA COLONY
-                  OPP TO CITY UNION BANK
-                  COIMBATORE - 641011
-                  TAMIL NADU, INDIA</span>
-              </li>
+
               <li className="flex items-center gap-3">
                 <Phone className="text-accent-green shrink-0" size={20} />
-                <span className="text-gray-400">+1 234 567 8900</span>
+                <span className="text-gray-400">+91</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-accent-green shrink-0" size={20} />
-                <span className="text-gray-400">info@alvitainstitute.com</span>
+                <span className="text-gray-400">info@arcticprofessionals.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 mt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Alvita International Institute. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Arctic Professionals Carrer Hub. All rights reserved.</p>
         </div>
       </div>
     </footer>
