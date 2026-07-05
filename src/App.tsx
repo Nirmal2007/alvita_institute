@@ -22,7 +22,7 @@ function Home() {
         <Hero />
         <About />
         <CareerSectors />
-        <TrainingPrograms />
+        {/*<TrainingPrograms />*/}
         <WhyChooseUs />
         <PlacementStats />
         <SuccessStories />

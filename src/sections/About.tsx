@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, Lightbulb, Award} from 'lucide-react';
+import { Target, Lightbulb, Award } from 'lucide-react';
 
 export function About() {
   const container = {
@@ -61,7 +61,7 @@ export function About() {
                 </div>
                 <div>
                   <h4 className="font-bold text-text-main text-xl">#1</h4>
-                  <p className="text-gray-500 text-sm">Training Institute</p>
+                  <p className="text-gray-500 text-sm">Career Hub</p>
                 </div>
               </div>
             </motion.div>
@@ -75,12 +75,12 @@ export function About() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-primary-blue font-semibold tracking-wider uppercase text-sm mb-2">About Alvita</h2>
+              <h2 className="text-primary-blue font-semibold tracking-wider uppercase text-sm mb-2">Who are we?</h2>
               <h3 className="text-4xl md:text-5xl font-heading font-bold text-text-main mb-6 leading-tight">
                 Empowering Students to Achieve <span className="text-accent-green">Global Careers</span>
               </h3>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Alvita International Institute is a premier career consultancy and training institute dedicated to bridging the gap between ambitious students and dynamic global industries. We specialize in transforming potential into excellence.
+                Arctic Professionals is a premier career consultancy and training institute dedicated to bridging the gap between ambitious students and dynamic global industries. We specialize in transforming potential into excellence.
               </p>
             </motion.div>
 

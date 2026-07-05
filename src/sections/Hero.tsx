@@ -52,7 +52,7 @@ export function Hero() {
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6 leading-tight">
               Build Your Future with <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-blue to-accent-green">
-                Alvita International Institute
+                Arctic Professionals Career Hub
               </span>
             </h1>
           </motion.div>
@@ -76,7 +76,7 @@ export function Hero() {
               href="#apply"
               className="px-8 py-4 bg-primary-blue hover:bg-blue-600 text-white rounded-full font-semibold text-lg flex items-center gap-2 transition-all transform hover:-translate-y-1 shadow-lg shadow-primary-blue/30"
             >
-              Apply Now <ArrowRight size={20} />
+              Reserve Now <ArrowRight size={20} />
             </a>
             <a
               href="#programs"
@@ -95,9 +95,9 @@ export function Hero() {
           className="mt-20 mb-10 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl"
         >
           {[
-            { icon: Plane, text: "Aviation & Airport", color: "text-blue-400" },
+            /*{ icon: Plane, text: "Aviation & Airport", color: "text-blue-400" },
             { icon: Ship, text: "Marine Operations", color: "text-blue-300" },
-            { icon: Train, text: "Railway Services", color: "text-blue-200" }
+            { icon: Train, text: "Railway Services", color: "text-blue-200" }*/
           ].map((item, idx) => (
             <div key={idx} className="mt-8 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4 flex items-center gap-4 hover:bg-white/20 transition-colors cursor-pointer">
               <div className={`p-3 bg-white/10 rounded-full ${item.color}`}>

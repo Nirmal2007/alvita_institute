@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X} from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function Navbar() {
@@ -16,11 +16,11 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/#about' },
-    { name: 'Programs', path: '/#programs' },
-    { name: 'Placement', path: '/#placement' },
-    { name: 'Contact', path: '/#contact' },
+    { name: 'Gateway', path: '/' },
+    { name: 'Junction', path: '/#about' },
+    { name: 'Book your Future', path: '/#programs' },
+    { name: 'Success Records', path: '/#placement' },
+    //{ name: 'Book your Future', path: '/#contact' },
   ];
 
   return (
@@ -33,7 +33,7 @@ export function Navbar() {
           <Link to="/" className="flex items-center gap-2">
             <img src="icon.png" alt="Logo" className="h-12 w-auto" />
             <span className={`text-2xl font-heading font-bold ${scrolled ? 'text-primary-navy' : 'text-white'}`}>
-              Alvita <span className="text-accent-green">Institute</span>
+              Arctic <span className="text-accent-green">Professionals</span>
             </span>
           </Link>
 
@@ -53,7 +53,7 @@ export function Navbar() {
               href="#apply"
               className="bg-primary-blue hover:bg-primary-navy text-white px-6 py-2 rounded-full font-medium transition-colors"
             >
-              Apply Now
+              Reserve Now
             </a>
           </nav>
 
