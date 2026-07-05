@@ -4,7 +4,6 @@ import { Footer } from './components/layout/Footer';
 import { Hero } from './sections/Hero';
 import { About } from './sections/About';
 import { CareerSectors } from './sections/CareerSectors';
-import { TrainingPrograms } from './sections/TrainingPrograms';
 import { WhyChooseUs } from './sections/WhyChooseUs';
 import { PlacementStats } from './sections/PlacementStats';
 import { SuccessStories } from './sections/SuccessStories';
