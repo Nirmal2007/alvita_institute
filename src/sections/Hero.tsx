@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Plane, Ship, Train } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 
 
@@ -87,26 +87,6 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Floating Stats/Icons */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="mt-20 mb-10 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl"
-        >
-          {[
-            /*{ icon: Plane, text: "Aviation & Airport", color: "text-blue-400" },
-            { icon: Ship, text: "Marine Operations", color: "text-blue-300" },
-            { icon: Train, text: "Railway Services", color: "text-blue-200" }*/
-          ].map((item, idx) => (
-            <div key={idx} className="mt-8 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4 flex items-center gap-4 hover:bg-white/20 transition-colors cursor-pointer">
-              <div className={`p-3 bg-white/10 rounded-full ${item.color}`}>
-                <item.icon size={24} />
-              </div>
-              <span className="text-white font-medium">{item.text}</span>
-            </div>
-          ))}
-        </motion.div>
       </div>
 
     </section>
