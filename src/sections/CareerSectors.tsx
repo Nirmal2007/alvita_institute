@@ -97,7 +97,7 @@ const sectors = [
     icon: Computer,
     color: 'bg-orange-50 text-orange-600',
     hover: 'group-hover:bg-orange-600 group-hover:text-white',
-  },
+  }
   , {
     id: 'income-growth-guidance',
     title: 'Income Growth Guidance',
