@@ -15,12 +15,30 @@ import {
   BadgeIndianRupee,
   ShieldCheck,
   Handshake,
-  ArrowRight
+  ArrowRight,
+  type LucideIcon,
 } from "lucide-react";
 import { useState } from "react";
 import { X } from "lucide-react";
 import { sectorDetails } from "../data/careerSectors";
 
+interface SectorTheme {
+  bg: string;
+  light: string;
+  text: string;
+  border: string;
+  button: string;
+}
+
+interface Sector {
+  id: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  color: string;
+  hover: string;
+  theme: SectorTheme;
+}
 
 const sectors = [
   {
@@ -266,7 +284,7 @@ const sectors = [
 ];
 
 export function CareerSectors() {
-  const [selectedSector, setSelectedSector] = useState(null);
+  const [selectedSector, setSelectedSector] = useState<Sector | null>(null);
   const details = selectedSector
     ? sectorDetails[selectedSector.id as keyof typeof sectorDetails]
     : null;
