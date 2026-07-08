@@ -92,7 +92,7 @@ export function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="bg-primary-blue text-center text-white px-6 py-3 rounded-md font-medium mt-2"
               >
-                Apply Now
+                Reserve Now
               </a>
             </nav>
           </motion.div>

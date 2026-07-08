@@ -2,14 +2,14 @@ import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 
 const features = [
-  'Experienced Trainers & Industry Experts',
-  'Industry-Oriented Curriculum',
-  '100% Placement Assistance',
-  'Mock Interviews & Resume Building',
-  'Internationally Recognized Certification',
-  'Personalized Career Counseling',
-  'State-of-the-art Training Facilities',
-  'Focus on Soft Skills & Personality Development'
+  'Departmental Experts',
+  'Career-Oriented Curriculum',
+  'Ontime Placement',
+  'Interview Ethics & Resume Building',
+  'Global level Certifications',
+  'Personalized Career Counseling Process',
+  'Modernized Training Facilities',
+  'Ever Green Success Principles'
 ];
 
 export function WhyChooseUs() {
@@ -30,11 +30,11 @@ export function WhyChooseUs() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-accent-green font-semibold tracking-wider uppercase text-sm mb-2">Why Choose Arctic</h2>
-              <h3 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-                Your Bridge to a <br />Successful Career
+              <h3 className="text-4xl md:text-5xl font-heading font-bold mb-5">
+                Modern Bridge for <br />Successful <br />Life
               </h3>
               <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-                We go beyond traditional teaching. Our approach integrates practical industry insights, personalized mentorship, and robust placement support to ensure you are ready for the professional world.
+                We go beyond traditional career selection. Our approach integrates practical industry insights, personalized mentorship, and supersonic placement support to ensure that you will get ready for the Highly competetive world
               </p>
             </motion.div>
 

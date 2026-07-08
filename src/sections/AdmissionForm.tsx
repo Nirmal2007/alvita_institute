@@ -11,12 +11,53 @@ const formSchema = z.object({
   email: z.string().email("Invalid email address"),
   dob: z.string().min(1, "Date of birth is required"),
   gender: z.string().min(1, "Please select a gender"),
-  qualification: z.string().min(1, "Highest qualification is required"),
-  sector: z.string().min(1, "Please select a preferred sector"),
-  city: z.string().min(2, "City is required"),
-  state: z.string().min(2, "State is required"),
+  qualification: z.string().optional(),
+  sector: z.string().optional(),
+  city: z.string().optional(),
+  state: z.string().optional(),
   message: z.string().optional(),
 });
+
+const sectors = [
+  "Indian Airport Operations",
+  "International Airport Administration",
+  "Aerospace",
+  "Aeronautical",
+  "Domestic Banking",
+  "Assistant Doctor",
+  "Investment Sector",
+  "Corporate Railways",
+  "Universal Marine",
+  "Organizational Management",
+  "Hospitality",
+  "Global Software",
+  "Income Growth Guidance",
+  "Corporate Police Officer",
+  "Self Employment Choices",
+  "Others"
+];
+
+const inputStyle =
+  `
+w-full
+h-14
+px-4
+rounded-xl
+bg-white
+border
+border-slate-300
+text-slate-800
+placeholder:text-slate-400
+transition-all
+duration-200
+outline-none
+
+focus:border-emerald-500
+focus:ring-4
+focus:ring-emerald-100
+
+hover:border-slate-400
+`;
 
 type FormData = z.infer<typeof formSchema>;
 
@@ -61,7 +102,7 @@ export function AdmissionForm() {
   };
 
   return (
-    <section className="py-24 bg-white relative" id="apply">
+    <section className="py-24 bg-primary-navy relative" id="apply">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row gap-16">
 
@@ -73,11 +114,11 @@ export function AdmissionForm() {
               transition={{ duration: 0.5 }}
               className="sticky top-24"
             >
-              <h2 className="text-primary-blue font-semibold tracking-wider uppercase text-sm mb-2">Apply Now</h2>
-              <h3 className="text-4xl font-heading font-bold text-text-main mb-6">
-                Take the First Step Towards Your Dream Career
+              <h2 className="text-primary-blue font-semibold tracking-wider uppercase text-sm mb-2">Reserve Now</h2>
+              <h3 className="text-4xl font-heading font-bold text-text-main  mb-6">
+                <span className="text-accent-green">Take the First Step Towards Your Dream Career</span>
               </h3>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <p className="text-white mb-8 leading-relaxed">
                 Fill out the admission inquiry form and our career counselors will get in touch with you shortly to guide you through the process and help you select the right program.
               </p>
 
@@ -86,7 +127,7 @@ export function AdmissionForm() {
                 <ul className="space-y-4">
                   <li className="flex gap-3 text-gray-600 text-sm">
                     <span className="w-6 h-6 rounded-full bg-primary-blue/10 text-primary-blue flex items-center justify-center shrink-0 font-bold">1</span>
-                    We review your application and profile.
+                    We verify your application and profile.
                   </li>
                   <li className="flex gap-3 text-gray-600 text-sm">
                     <span className="w-6 h-6 rounded-full bg-primary-blue/10 text-primary-blue flex items-center justify-center shrink-0 font-bold">2</span>
@@ -107,7 +148,7 @@ export function AdmissionForm() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl border border-gray-100"
+              className="bg-slate-50 rounded-[28px] p-8 md:p-10 border border-slate-200 shadow-[0_25px_60px_rgba(15,23,42,0.18)] backdrop-blur-sm"
             >
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
 
@@ -117,7 +158,7 @@ export function AdmissionForm() {
                     <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
                     <input
                       {...register('fullName')}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-blue focus:ring-2 focus:ring-primary-blue/20 outline-none transition-all"
+                      className={inputStyle}
                       placeholder="John Doe"
                     />
                     {errors.fullName && <p className="text-red-500 text-xs mt-1">{errors.fullName.message}</p>}
@@ -125,11 +166,11 @@ export function AdmissionForm() {
 
                   {/* Mobile Number */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Mobile Number *</label>
+                    <label className="block mb-2 text-sm font-semibold text-slate-700">Mobile Number *</label>
                     <input
                       {...register('mobile')}
                       type="tel"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-blue focus:ring-2 focus:ring-primary-blue/20 outline-none transition-all"
+                      className={inputStyle}
                       placeholder="+91 9876543210"
                     />
                     {errors.mobile && <p className="text-red-500 text-xs mt-1">{errors.mobile.message}</p>}
@@ -141,7 +182,7 @@ export function AdmissionForm() {
                     <input
                       {...register('email')}
                       type="email"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-blue focus:ring-2 focus:ring-primary-blue/20 outline-none transition-all"
+                      className={inputStyle}
                       placeholder="john@example.com"
                     />
                     {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
@@ -153,7 +194,7 @@ export function AdmissionForm() {
                     <input
                       {...register('dob')}
                       type="date"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-blue focus:ring-2 focus:ring-primary-blue/20 outline-none transition-all"
+                      className={inputStyle}
                     />
                     {errors.dob && <p className="text-red-500 text-xs mt-1">{errors.dob.message}</p>}
                   </div>
@@ -175,7 +216,7 @@ export function AdmissionForm() {
 
                   {/* Qualification */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Highest Qualification *</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Highest Qualification</label>
                     <select
                       {...register('qualification')}
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-blue focus:ring-2 focus:ring-primary-blue/20 outline-none transition-all bg-white"
@@ -190,25 +231,41 @@ export function AdmissionForm() {
                   </div>
 
                   {/* Preferred Sector */}
+
                   <div className="md:col-span-2">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Career Sector *</label>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                      {['Airport / Aviation', 'Railway', 'Marine / Cruise', 'Logistics', 'Hospitality', 'Software/IT'].map((sec) => (
-                        <label key={sec} className="flex items-center gap-2 p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-bg-alt transition-colors">
-                          <input type="radio" value={sec} {...register('sector')} className="text-primary-blue focus:ring-primary-blue" />
-                          <span className="text-sm text-gray-700">{sec}</span>
-                        </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Preferred Career Sector
+                    </label>
+
+                    <select
+                      {...register("sector")}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-primary-blue bg-white"
+                      defaultValue=""
+                    >
+                      <option value="" disabled>
+                        Select a career sector
+                      </option>
+
+                      {sectors.map((sector) => (
+                        <option key={sector} value={sector}>
+                          {sector}
+                        </option>
                       ))}
-                    </div>
-                    {errors.sector && <p className="text-red-500 text-xs mt-1">{errors.sector.message}</p>}
+                    </select>
+
+                    {errors.sector && (
+                      <p className="text-red-500 text-xs mt-1">
+                        {errors.sector.message}
+                      </p>
+                    )}
                   </div>
 
                   {/* City */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">City *</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">City</label>
                     <input
                       {...register('city')}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-blue focus:ring-2 focus:ring-primary-blue/20 outline-none transition-all"
+                      className={inputStyle}
                       placeholder="Your City"
                     />
                     {errors.city && <p className="text-red-500 text-xs mt-1">{errors.city.message}</p>}
@@ -216,10 +273,10 @@ export function AdmissionForm() {
 
                   {/* State */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">State *</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">State</label>
                     <input
                       {...register('state')}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-blue focus:ring-2 focus:ring-primary-blue/20 outline-none transition-all"
+                      className={inputStyle}
                       placeholder="Your State"
                     />
                     {errors.state && <p className="text-red-500 text-xs mt-1">{errors.state.message}</p>}

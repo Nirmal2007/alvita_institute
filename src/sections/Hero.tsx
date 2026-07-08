@@ -82,7 +82,7 @@ export function Hero() {
               href="#programs"
               className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 rounded-full font-semibold text-lg flex items-center gap-2 transition-all"
             >
-              Explore Programs
+              Choose & Settle Today
             </a>
           </motion.div>
         </div>
